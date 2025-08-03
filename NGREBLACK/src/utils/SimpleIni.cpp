@@ -31,6 +31,8 @@ void LoadConfig( ) {
     disableBloodyRageChime = ini.GetBoolValue(L"UIEFFECTS", L"disableBloodyRageChime", true);
     freeCameraEnable = ini.GetBoolValue(L"UIEFFECTS", L"freeCameraEnable", false);
     disableSobGlow = ini.GetBoolValue(L"UIEFFECTS", L"disableSobGlow", false);
+    ryuEnableVeinyArmEffect = ini.GetBoolValue(L"UIEFFECTS", L"ryuEnableVeinyArmEffect", true);
+    disableModelRender = ini.GetBoolValue(L"UIEFFECTS", L"disableModelRender", false);
 
     //ENEMYAI
     aiDodgeChance = ini.GetDoubleValue(L"ENEMYAI", L"aiDodgeChance", 65);

@@ -26,8 +26,10 @@ uintptr_t surgeGaugeRateJumpAddress = 0x18C153D;
 const uintptr_t disableHpUIOffset = 0xCBFC64;
 uintptr_t disableHPUIAddress = 0;
 const BYTE nope5Bytes[] = {0x90, 0x90, 0x90, 0x90, 0x90, 0x90};
-const BYTE enableHPUIBytes[]{0xE8, 0x97, 0xF4, 0xFF, 0xFF};
-const BYTE freeCameraEnableBytes[]{0xE8, 0x54, 0x3D, 0x04, 0x00};
+const BYTE enableHPUIBytes[] = {0xE8, 0x97, 0xF4, 0xFF, 0xFF};
+const BYTE freeCameraEnableBytes[] = {0xE8, 0x54, 0x3D, 0x04, 0x00};
+const BYTE disableRenderBytes[] = {0xE9, 0xBD, 0x01, 0x00, 0x00, 0x90};
+const BYTE disableRenderBytesRestore[] = {0x0F, 0x84, 0xBC, 0x01, 0x00, 0x00};
 
 
 float ninpoGaugeFillRate = 0.50f;
@@ -137,3 +139,8 @@ bool replaceInfernoTrueInf = false;
 
 bool disableEnemyAI = false;
 uintptr_t disableEnemyAIAddress = 0x149EAAD;
+
+bool ryuEnableVeinyArmEffect = false;
+uintptr_t ryuVeinyArmEffectAddress = 0x7BEC9;
+bool disableModelRender = false;
+uintptr_t disableModelRenderAddress = 0xC4C13A;

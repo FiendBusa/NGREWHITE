@@ -26,6 +26,8 @@ Ngre::Ngre(DWORD_PTR baseAddress) {
     sobGlowAddress += baseAddress;
     injectAttackCancelsJE += baseAddress;
     disableEnemyAIAddress += baseAddress;
+    ryuVeinyArmEffectAddress += baseAddress;
+    disableModelRenderAddress += baseAddress;
 
     HookInfo hooks[] = {
  

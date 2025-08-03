@@ -123,3 +123,10 @@ extern "C" bool replaceInfernoTrueInf;
 
 extern bool disableEnemyAI;
 extern uintptr_t disableEnemyAIAddress;
+
+extern bool ryuEnableVeinyArmEffect;
+extern uintptr_t ryuVeinyArmEffectAddress;
+extern bool disableModelRender;
+extern uintptr_t disableModelRenderAddress;
+extern const BYTE disableRenderBytes[];
+extern const BYTE disableRenderBytesRestore[];

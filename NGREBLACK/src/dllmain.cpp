@@ -125,6 +125,20 @@ DWORD WINAPI OnProcessAttachModLogic(LPVOID lpParam) {
         } else {
             WriteByte(sobGlowAddress, 0x01);
         }
+        if (ryuEnableVeinyArmEffect) {
+            WriteByte(ryuVeinyArmEffectAddress, 0xEB);
+        } else {
+            WriteByte(ryuVeinyArmEffectAddress, 0x74);
+        }
+        if (disableModelRender) {
+            WriteBytes(disableModelRenderAddress, disableRenderBytes, 5);
+        } else {
+            WriteBytes(disableModelRenderAddress, disableRenderBytesRestore, 5);
+        }
+        
+
+
+
        /* if (disableEnemyAI) {
             WriteByte(disableEnemyAIAddress, 0xEB);
 

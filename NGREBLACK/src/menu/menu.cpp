@@ -104,6 +104,11 @@ namespace Menu {
                 ImGui::Checkbox("Disable SoB Red Warning Glow", &disableSobGlow);
                 ImGui::EndTabItem( );
             }
+            if (ImGui::BeginTabItem("Render and Lighting")) {
+                ImGui::Checkbox("Enable Curse on Ryu's Arm (Non Cursed Falcon Model)", &ryuEnableVeinyArmEffect);
+                ImGui::Checkbox("Disable Player & Enemy Model Render", &disableModelRender);
+                ImGui::EndTabItem( );
+            }
             if (ImGui::BeginTabItem("Enemy A.I")) {
                 ImGui::TextColored(ImVec4(1.0f, 0.1f, 0.1f, 1.0f), "Enemy Evade Chance (NOT BLOCK)");
                 ImGui::DragInt("Keep at 0 to disable and use game default logic (HIGHER VALUE = LESS CHANCE TO EVADE)", &aiDodgeChance, 1, 0, 100, "%d", ImGuiSliderFlags_AlwaysClamp);
